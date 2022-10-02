@@ -2,7 +2,6 @@
 /**
  * @file pid.cpp
  * @author Naveen Mangla(nmangla@umd.edu)
- * @author Dhanush Babu allam (dallam@umd.edu)
  * @brief definiation of function cal_pid
  * @version 0.1
  * @date 2022-10-01

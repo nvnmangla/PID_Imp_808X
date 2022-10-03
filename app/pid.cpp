@@ -13,9 +13,9 @@
 
 #include <pid.hpp>
 
-double PID::cal_pid(double val, double setpoint) {
+double PID::cal_pid(double init_vel, double setpoint_vel) {
 
-  double error = setpoint - val;
+  double error = setpoint_vel - init_vel;
 
   double p_out = PID::K_p*error;
   

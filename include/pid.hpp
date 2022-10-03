@@ -32,11 +32,11 @@ class PID {
 
   /**
    * @brief
-   * @param val -actual velocity
+   * @param init_vel -actual velocity
    * @param setpoint -target setpoint
    */
 
-  double cal_pid(double val, double setpoint);
+  double cal_pid(double init_vel, double setpoint_vel);
 };
 
 #endif  // PID_IMP_INCLUDE_PID_HPP_

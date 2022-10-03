@@ -49,3 +49,8 @@ TEST(PID, output4) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
   EXPECT_LE(-100, pid.cal_pid(30,0));
 }
+
+/**
+ * TODO: Add a test case to check code crash when
+ *       value of dt is 0
+ */

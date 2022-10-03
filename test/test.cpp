@@ -1,8 +1,9 @@
 /**
  * @file test.cpp
  * @author Naveen Mangla (nmangla@umd.edu)
+ * @author Smit Dumore (smitd@umd.edu)
  * @brief Testing 
- * @version 0.1
+ * @version 0.2
  * @date 2022-10-03
  * 
  * @copyright Copyright (c) 2022
@@ -28,5 +29,5 @@ TEST(PID, output) {
  */
 TEST(PID, output2) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
-  EXPECT_EQ(-31.2, pid.cal_pid(30,0));
+  EXPECT_EQ(-31.8, pid.cal_pid(30,0));
 }

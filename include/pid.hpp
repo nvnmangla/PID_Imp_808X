@@ -1,8 +1,9 @@
 /**
  * @file pid.hpp
  * @author Naveen Mangla (nmangla@umd.edu)
+ * @author Smit Dumore (smitd@umd.edu)
  * @brief Class Pid declaration
- * @version 0.1
+ * @version 0.2
  * @date 2022-10-01
  *
  * @copyright Copyright (c) 2022

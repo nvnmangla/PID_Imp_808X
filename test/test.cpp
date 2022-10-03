@@ -31,3 +31,21 @@ TEST(PID, output2) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
   EXPECT_EQ(-31.8, pid.cal_pid(30,0));
 }
+
+/**
+ * @brief Construct a new TEST to test max positive actuator limit
+ * 
+ */
+TEST(PID, output3) {
+  PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
+  EXPECT_GE(100, pid.cal_pid(30,0));
+}
+
+/**
+ * @brief Construct a new TEST to test max negative actuator limit
+ * 
+ */
+TEST(PID, output4) {
+  PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
+  EXPECT_LE(-100, pid.cal_pid(30,0));
+}

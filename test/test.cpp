@@ -19,8 +19,9 @@
  *        correctness of PID calculations
  */
 TEST(PID, output) {
+  double tolerance = 0.5;
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
-  EXPECT_EQ(-21.2, pid.cal_pid(20, 0));
+  EXPECT_NEAR(-21.2, pid.cal_pid(20, 0), tolerance);
 }
 
 /**
@@ -28,8 +29,9 @@ TEST(PID, output) {
  *        correctness of PID calculations
  */
 TEST(PID, output2) {
+  double tolerance = 0.5;
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
-  EXPECT_EQ(-31.8, pid.cal_pid(30, 0));
+  EXPECT_NEAR(-31.8, pid.cal_pid(30, 0), tolerance);
 }
 
 /**

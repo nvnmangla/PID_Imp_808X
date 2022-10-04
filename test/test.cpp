@@ -11,7 +11,7 @@
  */
 
 #include <gtest/gtest.h>
-#include "pid.hpp"
+#include "../include/pid.hpp"
 
 
 /**
@@ -20,7 +20,7 @@
  */
 TEST(PID, output) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
-  EXPECT_EQ(-21.2, pid.cal_pid(20,0));
+  EXPECT_EQ(-21.2, pid.cal_pid(20, 0));
 }
 
 /**
@@ -29,7 +29,7 @@ TEST(PID, output) {
  */
 TEST(PID, output2) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
-  EXPECT_EQ(-31.8, pid.cal_pid(30,0));
+  EXPECT_EQ(-31.8, pid.cal_pid(30, 0));
 }
 
 /**
@@ -38,7 +38,7 @@ TEST(PID, output2) {
  */
 TEST(PID, output3) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
-  EXPECT_GE(100, pid.cal_pid(30,0));
+  EXPECT_GE(100, pid.cal_pid(30, 0));
 }
 
 /**
@@ -47,7 +47,7 @@ TEST(PID, output3) {
  */
 TEST(PID, output4) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
-  EXPECT_LE(-100, pid.cal_pid(30,0));
+  EXPECT_LE(-100, pid.cal_pid(30, 0));
 }
 
 /**
@@ -57,6 +57,6 @@ TEST(PID, output4) {
  */
 TEST(PID, output5) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.0);
-  EXPECT_THROW(pid.cal_pid(30,0), std::runtime_error);
+  EXPECT_THROW(pid.cal_pid(30, 0), std::runtime_error);
 }
 

@@ -12,8 +12,8 @@
 #include <iostream>
 #include <stdexcept>
 
-#ifndef PID_IMP_INCLUDE_PID_HPP_
-#define PID_IMP_INCLUDE_PID_HPP_
+#ifndef INCLUDE_PID_HPP_
+#define INCLUDE_PID_HPP_
 
 class PID {
  private:
@@ -45,4 +45,4 @@ class PID {
   double get_dt();
 };
 
-#endif  // PID_IMP_INCLUDE_PID_HPP_
+#endif  // INCLUDE_PID_HPP_

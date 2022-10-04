@@ -51,6 +51,12 @@ TEST(PID, output4) {
 }
 
 /**
- * TODO: Add a test case to check code crash when
- *       value of dt is 0
+ * @brief Construct a new TEST to catch runtime error while 
+ *        attemting to divide by zero
+ * 
  */
+TEST(PID, output5) {
+  PID pid(0.01, 0.1, 0.5, 100, -100, 0.0);
+  EXPECT_THROW(pid.cal_pid(30,0), std::runtime_error);
+}
+

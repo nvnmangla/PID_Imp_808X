@@ -10,6 +10,7 @@
  *
  */
 #include <iostream>
+#include <stdexcept>
 
 #ifndef PID_IMP_INCLUDE_PID_HPP_
 #define PID_IMP_INCLUDE_PID_HPP_
@@ -33,10 +34,15 @@ class PID {
   /**
    * @brief
    * @param init_vel -actual velocity
-   * @param setpoint -target setpoint
+   * @param setpoint_vel -target setpoint
    */
-
   double cal_pid(double init_vel, double setpoint_vel);
+
+  /**
+   * @brief
+   * @return value of dt
+   */
+  double get_dt();
 };
 
 #endif  // PID_IMP_INCLUDE_PID_HPP_

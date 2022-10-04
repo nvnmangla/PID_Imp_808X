@@ -25,21 +25,31 @@ class PID {
   double dt;    // diffrential change in time
   double integral{};
   double pre_error{};
-  // constructor
 
  public:
+  /**
+  * @brief Constructor for a new PID object
+  * 
+  * @param Kp 
+  * @param Kd 
+  * @param Ki 
+  * @param max_out 
+  * @param min_out 
+  * @param t 
+  */
   PID(double Kp, double Kd, double Ki, double max_out, double min_out,
-      double t);  // Constructor with parameters
+      double t);
 
   /**
-   * @brief
+   * @brief This is the function to calculate the PID correction required to 
+   *        attain the setpoint velocity 
    * @param init_vel -actual velocity
    * @param setpoint_vel -target setpoint
    */
   double cal_pid(double init_vel, double setpoint_vel);
 
   /**
-   * @brief
+   * @brief This function is uset to get the dt value
    * @return value of dt
    */
   double get_dt();

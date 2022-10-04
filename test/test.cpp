@@ -15,8 +15,8 @@
 
 
 /**
- * @brief Construct a new TEST case output1
- * 
+ * @brief Construct a new TEST case output1 to check 
+ *        correctness of PID calculations
  */
 TEST(PID, output) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
@@ -24,8 +24,8 @@ TEST(PID, output) {
 }
 
 /**
- * @brief Construct a new TEST case output2
- * 
+ * @brief Construct a new TEST case output2 to check 
+ *        correctness of PID calculations
  */
 TEST(PID, output2) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.1);
@@ -52,8 +52,7 @@ TEST(PID, output4) {
 
 /**
  * @brief Construct a new TEST to catch runtime error while 
- *        attemting to divide by zero
- * 
+ *        attempting to divide by zero
  */
 TEST(PID, output5) {
   PID pid(0.01, 0.1, 0.5, 100, -100, 0.0);

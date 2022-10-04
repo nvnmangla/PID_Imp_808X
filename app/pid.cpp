@@ -11,29 +11,38 @@
  *
  */
 
+/// including headers
 #include <pid.hpp>
 
 double PID::cal_pid(double init_vel, double setpoint_vel) {
+  /// error calculated by subtracting setpoint velocity from initial velocity
   double error = setpoint_vel - init_vel;
 
+  /// proportional correction
   double p_out = PID::K_p * error;
 
+  /// throwing an error if values of dt is 0
   if (dt == 0) {
         throw std::runtime_error("Math error: Attempted to divide by Zero\n");
   }
 
   double derivative = (error - PID::pre_error) / PID::dt;
 
+  /// derivative correction
   double d_out = PID::K_d * derivative;
 
   PID::integral += error * (PID::dt);
 
+  /// integral correction
   double i_out = PID::K_i * PID::integral;
 
+  /// output is the sum of P, D and I terms
   double output = p_out + d_out + i_out;
 
+  /// updating pre_error as current error
   PID::pre_error = error;
 
+  /// checking the output to stay in actuator limits
   if (output > PID::_max) {
     output = PID::_max;
   } else if (output < PID::_min) {

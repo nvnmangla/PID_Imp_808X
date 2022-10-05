@@ -19,7 +19,7 @@ int main() {
   for (int i{}; i < 10; i++) {
     /// function call for PID calculation
     auto out = mypid.cal_pid(init_vel, 0);
-    // updating initial velocity for next iterations 
+    // updating initial velocity for next iterations
     init_vel += out;
   }
   return 0;

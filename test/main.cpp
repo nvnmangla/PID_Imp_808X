@@ -1,6 +1,7 @@
 /**
  * @file main.cpp
  * @author Naveen Mangla (nmangla@umd.edu)
+ * @author Smit Dumore (smitd@umd.edu)
  * @brief Test main file 
  * @version 0.1
  * @date 2022-10-02

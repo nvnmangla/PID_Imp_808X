@@ -1,6 +1,11 @@
 # PID Controller Implementation
+## PART-1 
 - ## Naveen Mangla: Driver
 - ## Dhanush Babu Allam: Navigator 
+
+## PART-2 
+- ## Smit Dumore: Driver
+- ## Nitesh Jha: Navigator 
 
 ## Overview
 
